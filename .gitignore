@@ -1,0 +1,60 @@
+# --- Java ---
+*.class
+*.jar
+*.war
+*.ear
+
+# --- Logs ---
+*.log
+logs/
+*.pid
+
+# --- Maven ---
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# --- Gradle ---
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+**/build/
+
+# --- IDEs: IntelliJ IDEA ---
+.idea/
+*.iml
+*.iws
+out/
+
+# --- IDEs: Eclipse ---
+.project
+.classpath
+.settings/
+.loadpath
+
+# --- OS 관련 파일 ---
+.DS_Store
+Thumbs.db
+
+# --- 환경설정 및 인증 파일 ---
+.env
+*.key
+*.pem
+*.crt
+*.jks
+application.yml
+application.properties
+application-*.yml
+application-*.properties
+
+# --- Test reports ---
+test-output/
+surefire-reports/
+
+# --- 기타 ---
+bin/
+tmp/
+*.swp
