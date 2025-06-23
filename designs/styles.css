@@ -22,7 +22,7 @@ a {
 
 .header {
     position: sticky;
-    width: 100vw;
+    width: 100%;
     height: 100px;
     background-image: linear-gradient(to right, #FFA600, #FFCD62);
 }
@@ -42,10 +42,24 @@ a {
 .header .logo {
     font-size: 2rem;
     color: #fff;
+    user-select: none;
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+.header .header-menu {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
 }
 
 .header .header-buttonBox {
     display: flex;
+    align-items: center;
     gap: 16px;
 }
 
@@ -59,6 +73,10 @@ a {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.header .header-buttonBox .mobile-menuButton {
+    font-size: 2.5rem;
 }
 
 .header .header-buttonBox .header-button i {
@@ -236,6 +254,24 @@ footer .footer-container .footer-copyrightText {
     font-size: 0.8rem;
 }
 
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.backdrop.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
 @media (max-width: 48rem) {
     .moim-container {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -246,6 +282,26 @@ footer .footer-container .footer-copyrightText {
     html {
         font-size: 0.8rem;
         box-sizing: border-box;
+    }
+
+    .header .header-buttonBox {
+        gap: 8px;
+    }
+
+    .header .header-buttonBox .header-button {
+        min-height: 32px;
+        padding: 4px;
+        border-radius: 0.5rem;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .header .header-buttonBox .mobile-none {
+        display: none;
     }
 
     .main-wrapper {
@@ -288,5 +344,4 @@ footer .footer-container .footer-copyrightText {
         margin-top: 20px;
         margin-bottom: 0;
     }
-
 }

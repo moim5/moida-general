@@ -9,6 +9,7 @@
             href="//cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css"
     />
     <script src="//cdn.jsdelivr.net/npm/@tabler/icons@latest/icons-react/dist/index.umd.min.js"></script>
+    <script type="application/javascript" src="script.js" defer></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <link rel="stylesheet" href="styles.css"/>
 </head>
@@ -24,6 +25,10 @@
             <div class="header-button">
                 <i class="ti ti-circle-letter-a"></i>
                 <span>관리자</span>
+            </div>
+            <div class="header-button" onclick="showBackdrop()">
+                <i class="ti ti-menu-2 mobile-menuButton"></i>
+                <span>메뉴</span>
             </div>
         </div>
     </div>
@@ -109,9 +114,9 @@
 </div>
 <div class="main-wrapper">
     <div class="subTitle-container">
-         <span class="subTitle">
-        지금 핫한 모임 🎉
-    </span>
+             <span class="subTitle">
+            지금 핫한 모임 🎉
+        </span>
     </div>
 
     <div class="moim-container">
@@ -492,8 +497,8 @@
                 <div class="footer-copyrightText">© 2025 Moineun Daseot Saram. All rights reserved.</div>
             </div>
         </div>
-
     </div>
 </footer>
+<div class="backdrop" onclick="hideBackdrop()"></div>
 </body>
 </html>
