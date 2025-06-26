@@ -59,6 +59,16 @@
         border-radius: 50px;
         font-size: 16px;
     }
+    .box2-host-info textarea{
+        width: 65%;
+        height: 300px;
+        padding: 10px;
+        margin-left: 10px;
+        margin-top: 10px;
+        border: 1px solid #f3760f;
+        border-radius: 50px;
+        font-size: 16px;        
+    }
     .box2-host-info div{
         text-align: left;
         margin-left: 20px;
@@ -201,7 +211,7 @@
         width: 73%;
         height: 200px;
         padding: 10px;
-        
+        scrollbar-width: auto;
         margin-top: 10px;
         border: 1px solid #f3760f;
         border-radius: 5px;
@@ -248,15 +258,20 @@
         <div class="box2">
             <div class="box2-host-info">
                 <p>호스트 정보</p>
-                    <div class="host-name">호스트 이름  
-                        <input type="text" placeholder="호스트 이름을 입력하세요" />
-                    </div>
-                    <div class="host-info">호스트 정보 
-                        <input type="text" placeholder="호스트 정보를 입력하세요" />
-                    </div>
-                    <div class="hosting-purpose">호스팅 목적 
-                        <input type="text" placeholder="호스팅 목적을 입력하세요" />
-                    </div>
+                <div class="host-name">
+                    <label for="hostName">호스트 이름</label>
+                    <input type="text" id="hostName" placeholder="호스트 이름을 입력하세요" />
+                </div>
+
+                <div class="host-info">
+                    <label for="hostInfo">호스트 정보</label>
+                    <input type="text" id="hostInfo" placeholder="호스트 정보를 입력하세요" />
+                </div>
+
+                <div class="hosting-purpose">
+                    <label for="hostingPurpose">호스팅 목적</label>
+                    <textarea id="hostingPurpose" placeholder="호스팅 목적을 입력하세요"></textarea>
+                </div>
             </div>
         </div>
     </div>
@@ -300,7 +315,7 @@
                     </div>
 
                     <div class="moim-description">
-                        <label for="moim-description">모임 설명:</label>
+                        <label for="moim-description">모임 설명:</label> <!--table-->
                         <textarea id="moim-description" name="moim-description" placeholder="모임 설명을 입력하세요"></textarea>
                     </div>
                     <div class="buttons">

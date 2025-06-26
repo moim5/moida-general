@@ -5,7 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    .joinmoim-container{
+        margin-top: 200px;
+        align-items: center;
+        flex-direction: row;
+    }
+    .join-moim-info{
+        display: flex;
+        justify-content: center;
+    }
+    iframe{
+        height: 400px;
+        width: 400px;
+    }
+    .moim-info{
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        margin-left: 20px;
+    }
+
+    .moim-info-menu{
+        height: 50px;
+        margin-top: 10px;
+        display: flex;
+        border: 1px solid black;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .moiminfo{
+        margin-top: 20px;
+        border: 1px solid black;
+        display: flex;
+        width: 400px;
+        height: 400px;
+        float: left;
+    }
     
+    .join-to-moim-box{
+        border: 1px solid black;
+        
+    }
+    
+</style>
+<body>
+    <form action="">
+        <div class="joinmoim-container">
+            <div class="moim-info">
+                <div class="join-moim-info">모임 가입</div>
+                    <iframe class="moim-image"></iframe>
+                    <div class="moim-info-menu">
+                        <a href="">모임정보 </a>/
+                        <a href=""> 호스트</a>/
+                        <a href=""> 모임후기</a>
+                    </div>
+                <div class="moiminfo"></div>
+            </div>
+            <div class="join-to-moim-box">
+                <div class="moim-title"></div>
+                <div class="moim-info-"> </div>
+                <div class="moim-price-text"></div>
+                <div class="moim-price"></div>
+                
+            </div>
+        </div>
+        
+    </form>
 </body>
 </html>
