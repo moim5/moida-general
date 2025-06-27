@@ -150,14 +150,14 @@ a {
     margin-bottom: 50px;
 }
 
-.subTitle-container > .subTitle {
+.subTitle {
     position: relative;
     font-size: 1.5rem;
     font-weight: bold;
     padding-bottom: 10px;
 }
 
-.subTitle-container > .subTitle::after {
+.subTitle::after {
     content: "";
     position: absolute;
     left: 0;
@@ -252,6 +252,92 @@ footer .footer-container .footer-copyright {
 footer .footer-container .footer-copyrightText {
     margin-top: 20px;
     font-size: 0.8rem;
+}
+
+.menu-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    pointer-events: none;
+}
+
+.menu-container {
+    width: 320px;
+    max-width: 80vw;
+    height: 100%;
+    background-color: rgb(247, 248, 251);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    pointer-events: all;
+}
+
+.backdrop.active ~ .menu-wrapper .menu-container {
+    transform: translateX(0);
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+}
+
+.menu-header .menu-logo {
+    font-size: 1.2rem;
+    user-select: none;
+    cursor: pointer;
+}
+
+.menu-header .menu-closeButton {
+    font-size: 1.8rem;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.menu-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.menu-content .menu-categoryBox .menu-title{
+    margin-bottom: 20px;
+}
+
+.menu-content .menu-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.menu-content .menu-categoryList {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.menu-content .menu-categoryList > a {
+    width: calc(50% - 25px);
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu-content .menu-categoryList > a > i {
+    margin-bottom: 3px;
 }
 
 .backdrop {

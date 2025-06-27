@@ -31,3 +31,32 @@ function hideBackdrop() {
         document.body.style.paddingRight = "";
     }
 }
+
+function showMenu() {
+    const menuWrapper = document.querySelector(".menu-wrapper");
+
+    if (menuWrapper) {
+        menuWrapper.classList.add("active");
+        showBackdrop();
+    }
+}
+
+function hideMenu() {
+    const menuWrapper = document.querySelector(".menu-wrapper");
+    if (menuWrapper) {
+        menuWrapper.classList.remove("active");
+        hideBackdrop();
+    }
+}
+
+document.addEventListener("click", function(event) {
+    const menuWrapper = document.querySelector(".menu-wrapper");
+    const menuContainer = document.querySelector(".menu-container");
+    const menuButton = document.querySelector(".header-button[onclick='showMenu()']")
+
+    if (menuWrapper && menuWrapper.classList.contains("active")) {
+        if (!menuContainer.contains(event.target) && !menuButton.contains(event.target)) {
+            hideMenu();
+        }
+    }
+})
