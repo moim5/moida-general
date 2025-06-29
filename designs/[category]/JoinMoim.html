@@ -32,6 +32,7 @@
     iframe{
         height: 400px;
         width: auto;
+        border-radius: 50px;
     }
     .moim-info{
         flex-shrink: 0;
@@ -45,13 +46,21 @@
         margin-top: 10px;
         display: flex;
         border: 1px solid black;
+        border-radius: 50px;
         justify-content: center;
         align-items: center;
         margin-top: 20px;
     }
+
+    .moim-info-menu a{
+        text-decoration: none;
+        color: gray;
+    }
+
     .moiminfo{
         margin-top: 20px;
         border: 1px solid black;
+        border-radius: 50px;
         display: flex;
         width: auto;
         height: 400px;
@@ -62,12 +71,13 @@
         flex-shrink: 0;
         width: 500px; 
         padding: 20px;
+        margin-left: 30px;
         border: 1px solid black;
         border-radius: 8px;
         display: flex;
         flex-direction: column;
         gap: 15px;
-        
+        position: sticky;
     }
 
     .extra-join-to-moim-box {
@@ -84,6 +94,14 @@
         height: fit-content;
     }
 
+    .join-moim-price{
+        display: flex; 
+        gap: 4px; 
+        font-weight: bold; 
+        font-size: 20px;
+    }
+
+
     
 </style>
 <body>
@@ -93,37 +111,25 @@
                 <div class="join-moim-info">모임 가입</div>
                     <iframe class="moim-image"></iframe>
                     <div class="moim-info-menu">
-                        <a href="">모임정보 </a>/
-                        <a href=""> 호스트</a>/
-                        <a href=""> 모임후기</a>
+                        <a href="">모임정보 /</a>
+                        <a href=""> 호스트 </a>
+                        <a href=""> / 모임후기</a>
                     </div>
                 <div class="moiminfo"></div>
             </div>
             <div class="join-to-moim-box">
-       
-        <div>
-        </div>
-            <div style="height: 8px;"></div>
                 <p>모임제목 모임제목 모임제목 모임제목</p>
-
             <div style="display: flex; align-items: center; gap: 6px;">
-
-            <p>카테고리 · 장소 · 날짜 시간 15:30</p>
+                <p>카테고리 · 장소 · 날짜 시간 15:30</p>
             </div>
-
-            <hr style="border: none; border-top: 1px solid #f4f4f4;">
-
-            <p>참가비</p>
-            <div style="display: flex; gap: 4px; font-weight: bold; font-size: 20px; ">
-            <p>00,000</p><p>원</p>
-            </div>
-
+                <div>
+                    <p>참가비</p>
+                        <div class="join-moim-price">00,000원</div>
+                </div>
             <button type="button" style="padding: 10px 20px; background-color: #ffa600; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer;">
             신청하기
             </button>
-      </div>
-        </div>
-        
+      </div>      
     </form>
 
     
