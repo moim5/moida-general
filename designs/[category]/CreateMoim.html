@@ -66,19 +66,5 @@
                 </div>
 
     </div>
-
-    <script>
-        const onlineBtn = document.querySelector('.online');
-        const offlineBtn = document.querySelector('.offline');
-
-    function selectButton(btn) {
-        onlineBtn.classList.remove('selected');
-        offlineBtn.classList.remove('selected');
-        btn.classList.add('selected');
-    }
-
-    onlineBtn.addEventListener('click', () => selectButton(onlineBtn));
-    offlineBtn.addEventListener('click', () => selectButton(offlineBtn));
-    </script>
 </body>
 </html>
