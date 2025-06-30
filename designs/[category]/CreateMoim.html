@@ -4,388 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-
-
-
-
-    .box2-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 60px;
-        box-sizing: border-box;
-        gap: 60px;
-    }
-
-
-    .box{
-        border: 10px solid #f3760f;
-        margin:0 auto;
-        margin-bottom: 60px;
-        width: 300px;
-        height: 400px;
-        padding: 50px;
-        background: white; /*#ffa600 진한거 #ffcd62 연한거*/
-        border-radius: 40px;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
-    
-
-    .box2{
-        display: inline-block;
-        border: 2px solid #f3760f;
-        width: 500px;
-        height: 600px;
-        
-        border-radius: 40px;
-        margin: 0 auto;
-    }
-    .box2 p{
-        text-align: center;
-        font-size: 30px;
-        color: #f3760f;
-        margin-top: 20px;
-    }
-    .box2-host-info p{
-        border: 1px solid #f3760f;
-        margin: 0 auto;
-        margin-top: 30px;
-        width: 70%;
-
-    }
-    .box2-host-info input{
-        width: 65%;
-        padding: 10px;
-        margin-left: 10px;
-        margin-top: 10px;
-        border: 1px solid #f3760f;
-        border-radius: 50px;
-        font-size: 16px;
-    }
-    .box2-host-info textarea{
-        width: 65%;
-        height: 300px;
-        padding: 10px;
-        margin-left: 10px;
-        margin-top: 10px;
-        border: 1px solid #f3760f;
-        border-radius: 50px;
-        font-size: 16px;        
-    }
-    .box2-host-info div{
-        text-align: left;
-        margin-left: 20px;
-        font-size: 20px;
-        color: #f3760f;
-        margin-top: 10px;
-    }
-    .hosting-purpose{
-        padding-top: 10px;
-        display: flex;
-        gap: 10px;
-        align-items: flex-start;
-    }
-    .hosting-purpose input{
-        width: 65%;
-        height: 300px;
-    }
-    
-    .hosting-purpose label{
-        margin-top: 5px;
-    }
-
-    #hostingPurpose{
-        resize: none;
-        overflow: auto;
-    }
-
-
-
-
-
-    .MoimInfo {
-        border: 6px solid #ffcd62;
-        margin-top: 70px;
-        text-align: center;
-        font-size: 30px;
-        color: #333;
-        border-radius: 10px;
-    }
-
-    .online{
-        width: 100%;
-        padding: 15px;
-        text-align: center;
-        border: 2px solid #ffcd62;
-        border-radius: 15px;
-        cursor: pointer;
-    }
-    .offline{
-        
-        width: 100%;
-        padding: 15px;
-        text-align: center;
-        border: 2px solid #ffcd62;
-        border-radius: 15px;
-        cursor: pointer;
-    }
-    .online:hover{
-        background-color: #ffa600;
-        color: white;
-    }
-    .offline:hover{
-        background-color: #ffa600;
-        color: white;
-    }
-
-    .online.selected,
-    .offline.selected{
-        background-color: #ffa600;
-        color: white;
-    }
-
-
-    .buttons {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-top: 10px;
-        margin-left: -20px;
-    }
-
-
-
-    .custom-upload-button{
-        background-color: white;
-        padding: 10px 20px;
-        font-size: 14px;
-        border: none;
-        border: 1px solid #ffa600;
-
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-
-    button {
-        background-color: white;
-        padding: 10px 20px;
-        font-size: 14px;
-        border: none;
-        border: 1px solid #ffa600;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    .btn{
-        background-color: white;
-        font-size: 14px;
-        color: #ffa600;
-        border: 1px solid #ffa600;
-        border-radius: 5px;
-        cursor: pointer;
-        padding: 10px 20px;
-        text-align: center;
-        display: inline-block;
-    }
-    .cencel {
-        border: 1px solid #ffa600;       
-        color: white;
-    }
-
-    .next {
-        background: #ffa600;
-        color: white;
-    }
-
-
-    .box2-createMoim-process p{
-        font-size: 20px;
-        text-align: center;
-        margin-top: 20px;
-        gap: 20px;
-    }
-    .box3-container{
-        margin: 0 auto;
-        border: 2px solid #f3760f;
-        width: 500px;
-        height: 650px;
-        align-items: center;
-        border-radius: 40px;
-    }
-    .create-moim {
-        
-        font-size: 20px;
-        color: #f3760f;
-        margin-top: 20px;
-    }
-    .create-moim p{
-        text-align: center;
-    }
-
-    .create-moim-info-container{
-        float: left;
-        padding-left: 20px;
-        padding-right: 10px;
-        width: 100%;
-        height: 500px;
-        padding-top: 20px;
-    }
-    .create-moim-info-container input{
-        box-sizing: border-box;
-        width: 73%;
-        padding: 10px;
-        
-        margin-top: 10px;
-        border: 1px solid #f3760f;
-        border-radius: 5px;
-        font-size: 16px;
-    }
-    .create-moim-info-container textarea{
-        box-sizing: border-box;
-        width: 73%;
-        height: 200px;
-        padding: 10px;
-        scrollbar-width: auto;
-        margin-top: 10px;
-        border: 1px solid #f3760f;
-        border-radius: 5px;
-        font-size: 16px;
-    }
-    .create-moim-info-container select{
-        box-sizing: border-box;
-        width: 66%;
-        padding: 10px;
-        margin-top: 10px;
-        border: 1px solid #f3760f;
-        border-radius: 5px;
-        font-size: 16px;
-    }
-
-    .moim-description{
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    .moim-description label{
-        margin-top: 0;
-        margin-bottom: 5px;
-    }
-    
-    .moim-description textarea{
-        resize: none;
-        overflow: auto;
-        height: 150px;
-        margin-left: 5px;
-    }
-
-
-    </style>
-
+<link rel="stylesheet" href="CreateMoimStyle.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
 <body>
-    <br/><br/><br/><br/><br/><br/>
 
-
-
-    <div class="box"> 
-
-        <div class="MoimInfo">생성할 모임 유형 선택</div>
-        <br/>
-        <div class="online">온라인 모임</div>
-        <div class="offline">오프라인 모임</div>
-        <br/>
-        <!-- <div class="buttons">
-            <button class="cancel">취소</button>
-            <button class="next">다음</button>
-        </div> -->
-    </div>
-
-
-    <br/><br/><br/><br/><br/><br/>
-    <div class="box2-container">
-        <div class="box2">
-            <div class="box2-createMoim-process">
-                <p>모임 생성 과정</p>
-                <ol>
-                    <li>모임 유형 선택</li>
-                    <li>모임 정보 입력</li>
-                    <li>모임 생성 완료</li>
-                </ol>
-            </div>
-        </div>
-        <div class="box2">
-            <div class="box2-host-info">
-                <p>호스트 정보</p>
-                <div class="host-name">
-                    <label for="hostName">호스트 이름</label>
-                    <input type="text" id="hostName" placeholder="호스트 이름을 입력하세요" />
-                </div>
-
-                <div class="host-info">
-                    <label for="hostInfo">호스트 정보</label>
-                    <input type="text" id="hostInfo" placeholder="호스트 정보를 입력하세요" />
-                </div>
-
-                <div class="hosting-purpose">
-                    <label for="hostingPurpose">호스팅 목적</label>
-                    <textarea id="hostingPurpose" placeholder="호스팅 목적을 입력하세요"></textarea>
-                </div>
-            </div>
-        </div>
-    </div>
     <br/><br/><br/><br/><br/><br/>
     <div class="box3-container">
         <div class="create-moim">
             <p>모임 생성</p>
                 <div class="create-moim-info-container">
-                    <label for="moim-category">카테고리 선택:</label>
-                    <select id="moim-category" name="moim-category">
-                        <option value="">-- 카테고리를 선택하세요 --</option>
-                        <option value="travel">여행</option>
-                        <option value="njob">N잡</option>
-                        <option value="study">스터디</option>
-                        <option value="sports">스포츠</option>
-                        <option value="food">맛집</option>
-                        <option value="culture">문화/예술</option>
-                        <option value="tech">IT/기술</option>
-                        <option value="volunteer">봉사활동</option>
-                        <option value="etc">기타</option>
-                    </select>
-
+                    <div class="moim-time">
+                        <label for="moim-type">모임유형 :</label>
+                            <select id="moim-type" name="moim-type">
+                                <option value="">-- 모임유형을 선택하세요 --</option>
+                                <option value="online">온라인</option>
+                                <option value="offline">오프라인</option>
+                            </select>
+                    </div>
+                    <div class="moim-category-box">
+                        <label for="moim-category">
+                            카테고리 :</label>
+                        <select id="moim-category" name="moim-category">
+                            <option value="">-- 카테고리를 선택하세요 --</option>
+                            <option value="travel">여행</option>
+                            <option value="njob">N잡</option>
+                            <option value="study">스터디</option>
+                            <option value="sports">스포츠</option>
+                            <option value="food">맛집</option>
+                            <option value="culture">문화/예술</option>
+                            <option value="tech">IT/기술</option>
+                            <option value="volunteer">봉사활동</option>
+                            <option value="etc">기타</option>
+                        </select>
+                    </div>
                     <div class="moim-title">
-                        <label for="moim-title">모임 제목:</label>
+                        <label for="moim-title">모임제목 :</label>
                         <input type="text" id="moim-title" name="moim-title" placeholder="모임 제목을 입력하세요" />
                     </div>
 
                     <div class="moim-date">
-                        <label for="moim-date">모일 날짜:</label>
+                        <label for="moim-date">모일날짜 : </i></label>
                         <input type="datetime-local" id="moim-date" name="moim-date" />
                     </div>
 
-                    <div class="moim-time">
-                        <label for="moim-time">모일 시간:</label>
-                        <input type="time" id="moim-time" name="moim-time" />
-                    </div>
 
                     <div class="moim-location">
-                        <label for="moim-location">모일 장소:</label>
+                        <label for="moim-location">모일장소 :</label>
                         <input type="text" id="moim-location" name="moim-location" placeholder="모임 장소를 입력하세요" />
                     </div>
 
                     <div class="moim-description">
-                        <label for="moim-description">모임 설명:</label> <!--table-->
+                        <label for="moim-description">모임설명 :</label>
                         <textarea id="moim-description" name="moim-description" placeholder="모임 설명을 입력하세요"></textarea>
                     </div>
+                    <br/><br/>
                     <div class="buttons">
-                        <label for="upload-photo" class="btn">사진 업로드</label>
-                        <button type="submit" class="btn">모임 생성</button>
+                        <label for="upload-photo" class="btn">사진 업로드<i class="ti ti-photo-plus"></i></label>
+                        <button type="submit" class="btn">모임 생성<i class="ti ti-users-group"></i></button>
                         <input type="file" id="upload-photo" style="display: none;" />
                     </div>
                 </div>
