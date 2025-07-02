@@ -1,60 +1,85 @@
-# --- Java ---
+# ---------------------
+# OS 공통
+# ---------------------
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.swp
+
+# ---------------------
+# 환경 파일 (로컬 설정 전용)
+# ---------------------
+.env
+.env.*
+application-*.yml
+application-*.yaml
+application-*.properties
+!application.yml
+!application.yaml
+!application.properties
+
+# ---------------------
+# Java & Spring Boot
+# ---------------------
+/target/
 *.class
 *.jar
 *.war
 *.ear
-
-# --- Logs ---
-*.log
-logs/
 *.pid
+hs_err_pid*.log
+.rebel.xml
 
-# --- Maven ---
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
+# ---------------------
+# Maven
+# ---------------------
+.mvn/
+!**/mvnw
+!**/mvnw.cmd
 
-# --- Gradle ---
+# ---------------------
+# Gradle
+# ---------------------
 .gradle/
 build/
-!gradle/wrapper/gradle-wrapper.jar
-**/build/
+!gradlew
+!gradlew.bat
 
-# --- IDEs: IntelliJ IDEA ---
+# ---------------------
+# IntelliJ / WebStorm
+# ---------------------
 .idea/
 *.iml
 *.iws
 out/
+# 공유할 수 있는 일부 설정 제외
+!.idea/codeStyles/
 
-# --- IDEs: Eclipse ---
+# ---------------------
+# VSCode
+# ---------------------
+.vscode/
+.history/
+.code-workspace
+
+# ---------------------
+# Eclipse
+# ---------------------
 .project
 .classpath
 .settings/
-.loadpath
-
-# --- OS 관련 파일 ---
-.DS_Store
-Thumbs.db
-
-# --- 환경설정 및 인증 파일 ---
-.env
-*.key
-*.pem
-*.crt
-*.jks
-application.yml
-application.properties
-application-*.yml
-application-*.properties
-
-# --- Test reports ---
-test-output/
-surefire-reports/
-
-# --- 기타 ---
 bin/
 tmp/
-*.swp
+
+# ---------------------
+# 기타 백업 및 불필요 파일
+# ---------------------
+*.orig
+*.rej
+*.sublime-workspace
+*.sublime-project
+*.exe~
+*.dll~
+*.so~
