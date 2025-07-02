@@ -108,6 +108,12 @@ a {
     margin: 0 auto;
 }
 
+.main-wrapper.main-wrapper-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .category-container {
     width: 100%;
     margin: 50px auto;
@@ -288,6 +294,7 @@ footer .footer-container .footer-copyrightText {
     background-color: white;
     position: sticky;
     top: 0;
+    z-index: 20;
 }
 
 .menu-header .menu-logo {
@@ -309,7 +316,7 @@ footer .footer-container .footer-copyrightText {
     gap: 50px;
 }
 
-.menu-content .menu-categoryBox .menu-title{
+.menu-content .menu-categoryBox .menu-title {
     margin-bottom: 20px;
 }
 
@@ -319,24 +326,25 @@ footer .footer-container .footer-copyrightText {
     margin-bottom: 20px;
 }
 
-.menu-content .menu-categoryList {
+.menu-content .menu-list {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-.menu-content .menu-categoryList > a {
-    width: calc(50% - 25px);
-    padding: 10px;
+.menu-content .menu-list > a {
+    width: calc(50% - 10px);
+    padding: 10px 15px;
     background: white;
     border-radius: 10px;
     display: flex;
     align-items: center;
     gap: 5px;
+    box-sizing: border-box;
 }
 
-.menu-content .menu-categoryList > a > i {
+.menu-content .menu-list > a > i {
     margin-bottom: 3px;
 }
 

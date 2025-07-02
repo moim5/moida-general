@@ -38,6 +38,7 @@ function showMenu() {
     if (menuWrapper) {
         menuWrapper.classList.add("active");
         showBackdrop();
+
     }
 }
 
@@ -60,3 +61,5 @@ document.addEventListener("click", function(event) {
         }
     }
 })
+
+document.addEventListener("click", function(event) {})
