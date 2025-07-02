@@ -50,7 +50,7 @@ function hideMenu() {
     }
 }
 
-document.addEventListener("click", function(event) {
+document.addEventListener("click", function (event) {
     const menuWrapper = document.querySelector(".menu-wrapper");
     const menuContainer = document.querySelector(".menu-container");
     const menuButton = document.querySelector(".header-button[onclick='showMenu()']")
@@ -62,4 +62,14 @@ document.addEventListener("click", function(event) {
     }
 })
 
-document.addEventListener("click", function(event) {})
+function execDaumPostcode() {
+    new daum.Postcode({
+        oncomplete: function (data) {
+            console.log(data);
+            document.getElementById("zipCode").value = data.zonecode;
+            document.getElementById("address1").value = data.roadAddress;
+        },
+        width: "100%",
+        height: "100%"
+    }).open();
+}

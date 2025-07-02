@@ -2,9 +2,204 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
+    <link
+            rel="stylesheet"
+            href="//cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css"
+    />
+    <script src="//cdn.jsdelivr.net/npm/@tabler/icons@latest/icons-react/dist/index.umd.min.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script type="application/javascript" src="../../script.js" defer></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <link rel="stylesheet" href="../../styles.css"/>
+    <link rel="stylesheet" href="../sign.css"/>
 </head>
 <body>
+<header class="header">
+    <div class="header-container">
+        <a href="../../index.html" target="_self" class="logo">MOIDA</a>
+        <div class="header-buttonBox">
+            <div class="header-button">
+                <i class="ti ti-users"></i>
+                <span>마이</span>
+            </div>
+            <div class="header-button">
+                <i class="ti ti-circle-letter-a"></i>
+                <span>관리자</span>
+            </div>
+            <div class="header-button" onclick="showMenu()">
+                <i class="ti ti-menu-2 mobile-menuButton"></i>
+                <span>메뉴</span>
+            </div>
+        </div>
+    </div>
+</header>
 
+<div class="main-wrapper main-wrapper-center">
+    <form class="main-sign-container">
+        <div class="logo">MOIDA</div>
+        <div class="main-sign-description">
+            취향이 닿는 곳, 우리가 모이는 이유<br/>
+            모일수록 즐거운 세상, 모이다에서 시작돼요
+        </div>
+        <div class="main-sign-inputBox">
+            <label>사용자명 *
+                <input type="text" name="username" placeholder="아이디를 입력해주세요"/>
+            </label>
+            <label>비밀번호 *
+                <input type="password" name="password" placeholder="비밀번호를 입력해주세요"/>
+            </label>
+            <label>비밀번호 확인 *
+                <input type="password" name="confirm" placeholder="비밀번호를 다시 입력해주세요"/>
+            </label>
+            <label>이름 *
+                <input type="text" name="name" placeholder="이름을 입력해주세요"/>
+            </label>
+            <label>생일 *
+                <input type="date" name="birthday"/>
+            </label>
+            <label>성별 *
+                <select name="gender">
+                    <option value="M">남자</option>
+                    <option value="F">여자</option>
+                </select>
+            </label>
+            <label>이메일 *
+                <input type="email" name="email" placeholder="이메일을 입력해주세요"/>
+            </label>
+            <label>전화번호 *
+                <input type="tel" name="phone" placeholder="전화번호를 입력해주세요"/>
+            </label>
+            <label class="main-sign-postBox">주소 *
+                <div class="main-sign-postDiv">
+                    <button onclick="execDaumPostcode()">주소찾기</button>
+                    <input type="text" id="zipCode" name="zipCode" disabled="disabled"/>
+                </div>
+                <input type="text" id="address1" name="address1" disabled="disabled"/>
+                <input type="text" id="address2" name="address2"/>
+                <div id="daumPostcodeContainer" style="display:none; position:relative; z-index:999;"></div>
+            </label>
+        </div>
+        <button type="submit">회원가입</button>
+        <div class="main-sign-linkBox">
+            <a href="../up/signUp.html" target="_self">이미 회원이십니까?</a>
+        </div>
+
+    </form>
+</div>
+
+
+<footer>
+    <div class="main-wrapper">
+        <div class="footer-container">
+            <div class="footer-logo logo">
+                MOIDA
+            </div>
+            <div class="footer-menu">
+
+            </div>
+            <div class="footer-copyright">
+                당신의 취향이 모임이 되는 순간<br/>
+                사람과 사람이 만나는 가장 자연스러운 방식
+                <div class="footer-copyrightText">© 2025 Moineun Daseot Saram. All rights reserved.</div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="backdrop" onclick="hideBackdrop()"></div>
+<div class="menu-wrapper">
+    <div class="menu-container">
+        <div class="menu-header">
+            <div class="menu-logo logo">
+                <a href="/" target="_self">MOIDA</a>
+            </div>
+            <div class="menu-closeButton" onclick="hideMenu()">
+                <i class="ti ti-x"></i>
+            </div>
+        </div>
+        <div class="menu-content">
+            <div class="menu-categoryBox">
+                <div class="menu-title subTitle">
+                    카테고리
+                </div>
+                <div class="menu-list">
+                    <a href="[category]/categoryList.html" class="menu-item">
+                        <i class="ti ti-plane"></i>
+                        <span>여행</span>
+                    </a>
+                    <a href="[category]/categoryList.html" class="menu-item">
+                        <i class="ti ti-kayak"></i>
+                        <span>레져</span>
+                    </a>
+                    <a href="[category]/categoryList.html" class="menu-item">
+                        <i class="ti ti-palette"></i>
+                        <span>문화예술</span>
+                    </a>
+                    <a href="[category]/categoryList.html" class="menu-item">
+                        <i class="ti ti-confetti"></i>
+                        <span>파티</span>
+                    </a>
+                    <a href="[category]/categoryList.html" class="menu-item">
+                        <i class="ti ti-tools-kitchen-2"></i>
+                        <span>식사</span>
+                    </a>
+                    <a href="[category]/categoryList.html" class="menu-item">
+                        <i class="ti ti-book"></i>
+                        <span>자기계발</span>
+                    </a>
+                    <a href="[category]/categoryList.html" class="menu-item">
+                        <i class="ti ti-briefcase"></i>
+                        <span>N잡</span>
+                    </a>
+                    <a href="[category]/categoryList.html" class="menu-item">
+                        <i class="ti ti-language"></i>
+                        <span>외국어</span>
+                    </a>
+                    <a href="[category]/categoryList.html" class="menu-item">
+                        <i class="ti ti-heart"></i>
+                        <span>취미</span>
+                    </a>
+                    <a href="[category]/categoryList.html" class="menu-item">
+                        <i class="ti ti-device-gamepad-2"></i>
+                        <span>소셜게임</span>
+                    </a>
+                    <a href="[category]/categoryList.html" class="menu-item">
+                        <i class="ti ti-users"></i>
+                        <span>동네또래</span>
+                    </a>
+                    <a href="[category]/categoryList.html" class="menu-item">
+                        <i class="ti ti-hearts"></i>
+                        <span>연애사랑</span>
+                    </a>
+                </div>
+            </div>
+            <div class="menu-categoryBox">
+                <div class="menu-title subTitle">
+                    마이페이지
+                </div>
+                <div class="menu-list">
+                    <a href="../in/signIn.html" class="menu-item">
+                        로그인
+                    </a>
+                    <a href="../up/signUp.html" class="menu-item">
+                        회원가입
+                    </a>
+                </div>
+            </div>
+            <div class="menu-categoryBox">
+                <div class="menu-title subTitle">
+                    관리자전용
+                </div>
+                <div class="menu-list">
+                    <a href="admin/member/list/memberList.html" class="menu-item">
+                        회원
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

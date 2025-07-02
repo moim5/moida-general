@@ -45,7 +45,33 @@
     gap: 5px;
 }
 
-.main-sign-container > .main-sign-inputBox > label > input {
+.main-sign-container > .main-sign-inputBox > label > .main-sign-postDiv {
+    display: flex;
+    gap: 5px;
+}
+
+.main-sign-container > .main-sign-inputBox > label > .main-sign-postDiv > button {
+    width: 100px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #FFA600;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.main-sign-container > .main-sign-inputBox > label input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.main-sign-container > .main-sign-inputBox > label > select {
     width: 100%;
     font-size: 1rem;
     padding: 10px;
@@ -69,4 +95,15 @@
 
 .main-sign-container > button:hover {
     background-color: #FFCD62;
+}
+
+.main-sign-linkBox {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.main-sign-linkBox > a:hover {
+    color: #FFA600;
 }
