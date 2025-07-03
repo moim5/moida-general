@@ -199,79 +199,168 @@ body{
     display: none;
 }
 
-/* 리뷰 컨테이너 */
-.reviews-container{
+/* 리뷰제목+리뷰더보기 섹션 */
+.review-content{
     display: flex;
-    justify-content: left;
-    align-items: center;
-    margin-top: 20px;
-    width: 100%;
-    max-width:800px;
-    height:auto;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
 
 }
 /* <참여자후기>title */
 .review-title{
-    display:flex;
     justify-content: left;
-    flex-direction: column;
     font-size:30px;
     font-weight: 500;
     color:#000;
-    margin-bottom: 10px;
-    margin-top: 20px;
-    margin-left: 10px;
     box-sizing: border-box;
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 10px;
 }
-/* 후기더보기 버튼 */
-.reviews-button{
-    display: inline;
-    border:none;
-    background: none;
-    color:rgb(185, 182, 182);
-    cursor:pointer;
-    font-family: Arial, sans-serif;
-    font-size:14px;
-    font-weight:400;
-    letter-spacing:-0.25px;
-    line-height:22px;
-    word-break:break-word;
-    width: 100px;
-    height: 50px;
+
+/* 리뷰 아이템이 들어있는 구역 */
+.reviews-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width:800px;
+    height:auto;
+    margin-top: 20px;
 
 }
+
 /* 각 리뷰칸 */
 .review-item{
     display: flex;
-    align-items: center;
-    justify-content: flex-start space-evenly;
+    align-items: flex-start;
+    justify-content: center space-evenly;
     width: 200px;
-    padding: 15px;
+    height:130px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 16px;
+    margin-right: 10px;
+    background-color: white;
+    color:black;
     
 }
+.review-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1.5;
+}
 .profile-img{
-    border-radius: 50%;
-    width:60px;
-    height:60px;
+    border-radius: 100%;
+    width:50px;
+    height:50px;
     border-style: none;
     object-fit: cover;
+    padding-top: 6px;
+    padding-left: 6px;
 }
 .review-writer{
     display: flex;
     justify-content: flex-start;
     font-size: 20px;
     font-weight: 400;
-    margin-bottom: 10px;
+    padding-left: 5px;
 }
-.review-content{
-    text-align: center;
-    justify-content: flex-end;
-    display: block;
+.user-star{
+    font-size: 16px;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 5px;
+}
+.review span{
+    padding-top: 10px;
+    text-align: justify;
+    display: -webkit-box;
+    position: relative;
+    -webkit-line-clamp: 2;        /* 제한 줄 수  */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.4em;           /* 줄 간격 조정 */
+    max-height: 2.8em;            /* 줄 수 × line-height */
+    white-space: normal;
+    margin-left: -50px;
+    margin-top: 15px;
+    box-sizing: border-box;
+}
+.review p{
+    margin:0;
+    display: flex;
+}
+
+/* 리뷰더보기 버튼 */
+.more-btn{
+    display: inline;
+    white-space: nowrap;
+    background: none;
+    color:rgb(185, 182, 182);
+    cursor:pointer;
+    font-family: Arial, sans-serif;
+    font-size:13px;
+    font-weight:400;
+    letter-spacing:-0.25px;
+    line-height:22px;
+    word-break:break-word;
+    padding:0;
+    text-decoration: underline;
+    border-style: none;
     
 }
 
+/* 모달창 */
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 9998;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 9999;
+  width: 300px;
+  max-width: 80%;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px; right: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #555;
+}
+
+
+/* 상세정보 */
+.moim-detail-title{
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 100px;
+    padding-left: 10px;
+    
+    
+}
+hr{
+    border: none;
+    border-bottom: 2px solid rgb(185, 182, 182);
+    width: 700;
+    margin:10px auto;
+}
 
 /* 모임정보 더보기버튼 */
 .moreInfo{
@@ -287,6 +376,11 @@ word-break:break-word;
 width: 100px;
 height: 50px;
 overflow: hidden;
+}
+
+.moimInfo p{
+    font-size: 24px;
+
 }
 
 
