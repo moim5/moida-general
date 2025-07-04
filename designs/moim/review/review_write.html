@@ -17,7 +17,7 @@
                 
             <!--리뷰 작성란-->
             <div class="review-content"> 
-                <form id="reviewForm" method="post" action="/review/write">
+                <form id="reviewForm" method="post" action="/review/write"enctype="multipart/form-data">
                     <textarea id="reviewText" name="reviewText" rows="25" cols="150" placeholder="즐거웠던 기억을 되살려보세요! (10자 이상)" required  maxlength="1000"></textarea>
                     <div class="review-image-upload">
                         <i class="ti ti-library-photo"></i>

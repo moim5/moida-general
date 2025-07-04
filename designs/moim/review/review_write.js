@@ -81,11 +81,18 @@ window.onload = () => {
             
             if(clickedRating === selectedRating) {
                 selectedRating = 0; // 이미 선택된 별을 다시 클릭하면 선택 해제
+                clickedRating = 0;
             } else {
                 clickedRating = selectedRating; // 새로운 별을 클릭하면 선택된 별로 업데이트
             }
             
             updateStars(selectedRating);
+
+            //클릭할때마다 hidden input에도 값 업데이트 시키기
+            const raingInput = document.getElementById('raringInput');
+            if(raingInput){
+              raingInput.value = clickedRating;
+            }
         });
 
         star.addEventListener('mouseover',() => {
