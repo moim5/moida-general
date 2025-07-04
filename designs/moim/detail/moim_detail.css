@@ -132,8 +132,8 @@ body{
   text-align: center;
   position: fixed;
   width : 100%;
-  max-width: 400px;
-  height : 300px;
+  max-width: 430px;
+  height : 350px;
   gap:20px;
   padding: 24px;
   border: 1px solid #ccc;
@@ -167,12 +167,48 @@ body{
     margin-top: 10px;
     
 }
+/* 시간장소 섹션 */
 .moim-description{
     display:flex;
+    justify-content: flex-start;
+    flex-direction: column;
     font-size: 20px;
     font-weight: 300;
     color:#0000009d;
+    margin-bottom: 0;
+}
 
+/* 캘린더표시 : 시간 장소 */
+.moim-arrange{
+    display: flex;
+    align-items: center;
+    margin-left:10px;
+    margin-bottom: 20px;
+}
+
+.moim-fee{
+    font-size:25px;
+    font-weight: 500;
+    color:#000;
+    display: flex;
+    margin-bottom: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 25px;
+    
+}
+.moim-fee-2{
+    display: inline-flex;
+    padding-left: 230px;
+
+}
+.moim-enroll-divider{
+    display: block;
+    border: none;
+    border-bottom: 2px solid rgba(150, 149, 149, 0.267);
+    width: 420px;
+    align-content: center;
+    margin: 0 auto;
 }
 /* 신청하기 버튼 */
 .enroll-button-pc{
@@ -187,7 +223,7 @@ body{
     padding: 10px;
     width:100%;
     height: 60px;
-    margin-bottom:30px;
+    margin-bottom:20px;
 }
 
 .enroll-button-pc:hover{
@@ -195,7 +231,12 @@ body{
     cursor: pointer;
     color:#fff;
 }
-.main-enroll-mobile{
+ .main-enroll-mobile,
+ .main-enroll-mobile button, 
+ .moim-title-mobile,
+ .moim-description-mobile,
+ .moim-fee-mobile,
+ .moim-enroll-divider-mobile{
     display: none;
 }
 
@@ -259,8 +300,8 @@ body{
     height:50px;
     border-style: none;
     object-fit: cover;
-    padding-top: 6px;
-    padding-left: 6px;
+    margin-top: 6px;
+    margin-left: 6px;
 }
 .review-writer{
     display: flex;
@@ -268,12 +309,17 @@ body{
     font-size: 20px;
     font-weight: 400;
     padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 3px;
 }
 .user-star{
     font-size: 16px;
     display: flex;
+    align-items: center;
     justify-content: flex-start;
     padding-left: 5px;
+    gap:1.5px;
+    
 }
 .review span{
     padding-top: 10px;
@@ -355,36 +401,191 @@ body{
     
     
 }
-hr{
+hr.moimInfo-divider{
     border: none;
-    border-bottom: 2px solid rgb(185, 182, 182);
-    width: 700;
+     border-bottom: 2px solid rgba(150, 149, 149, 0.267);
+    width: 700px;
     margin:10px auto;
 }
 
+
+
+
+.moimInfo-container{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    max-width: 700px;
+    height:auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
 /* 모임정보 더보기버튼 */
 .moreInfo{
 color:rgb(185, 182, 182);
 cursor:pointer;
-display:inline;
-font-family: Arial, sans-serif;
-font-size:14px;
+display:flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+margin-top: 20px;
+font-size:30px;
 font-weight:400;
-letter-spacing:-0.25px;
-line-height:22px;
-word-break:break-word;
-width: 100px;
-height: 50px;
-overflow: hidden;
+border-radius: 16px;
+border:solid 1px rgb(185, 182, 182);
+background-color: white;
+line-height:25px;
+width: 100%;
+max-width: 1200px;
+height: 80px;
+text-overflow: unset;
 }
 
 .moimInfo p{
-    font-size: 24px;
+    font-size: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    word-break: break-word;     /* 긴 단어 줄바꿈 허용 */
+    overflow-wrap: break-word;  /* 최신 브라우저 대응 */
+    flex: 1 1 100%;    
+    margin:0;
+    overflow: hidden;
+    position: relative;   /* 버튼 위치 조절용 */
+}
+
+
+/* 호스트 섹션 */
+.host-intro{
+    display: flex;
+    font-size: 30px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+.host-intro-2{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    font-size: 20px;
+    color: rgb(185, 182, 182);
+}
+.host-container{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 10px;
+    width: 100%;
+    max-width: 700px;
+    margin-right: 30px;
+    margin-left: 10px;
+    height:auto;
+    border-radius: 16px;
+    border:solid 1px rgb(185, 182, 182);
+}
+.host-profile-img{
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 30px;
+    padding-left: 20px;
+}
+.host-profile-img img{
+    border-radius: 100%;
+    width:100px;
+    height:100px;
+    border-style: none;
+    object-fit: cover;
+    
+}
+
+/* 호스트이름, 소개 섹션 */
+.host-info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1.5;
+}
+.host-name{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 20px;
+    font-weight: 450;
+    padding-left: 35px;
+    padding-top: 10px;
+}
+.host-introduction{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 35px;
+    padding-top: 10px;
+    color:rgb(185, 182, 182);
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    line-height: 1.4;
+    white-space: normal;
+    box-sizing: border-box;
+}
+
+.host-moimImg{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 700px;
+    box-sizing: border-box;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding: 10px;
+    gap:5px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    
+}
+.host-moimImg::-webkit-scrollbar{
+    height:6px;
+}
+.host-moimImg::-webkit-scrollbar-thumb {
+  background-color: rgba(150, 150, 150, 0.5);
+  border-radius: 3px;
+}
+
+.host-moimImg img{
+    min-width: 250px;
+    height: 300px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    scroll-snap-align: start;  /* 스크롤 시 이미지 정렬 */
 
 }
 
 
+
 @media screen and (max-width: 768px){
+    .main-wrapper {
+    flex-direction: column;
+    align-items: center; 
+    padding: 0 16px;      
+    box-sizing: border-box;
+  }
+
+    .main-container,
+    .main-container2,
+    .host-container,
+    .moimInfo-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;        /* 가운데 배치 */
+    padding: 0 10px;       /* 내부 여백 */
+    box-sizing: border-box;
+  }
+    
     .main-enroll{
     position: sticky;
     justify-content: center;
@@ -399,7 +600,10 @@ overflow: hidden;
      }
     .moim-main-image{
         width:100%;
-        margin: 0 auto;
+        margin: 20px auto;
+        justify-content: center;
+        align-items: center;
+        
     }
     /* pc버튼 안보이게 처리 */
   .main-enroll-pc{
@@ -424,6 +628,8 @@ overflow: hidden;
     }
     .main-enroll-mobile button{
         display: flex;
+        justify-content: center;  
+        align-items: center;      
         width:100%;
         height:100%;
         border:none;
@@ -437,15 +643,125 @@ overflow: hidden;
         cursor: pointer;
     }
 
-    .moim-description{
-        display: none;
+    .moim-title-mobile{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        font-size: 30px;
+        color: #000;
+        font-weight: 500;
+
     }
-    .moim-title{
-        display: none;
+    .moim-description-mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 15px;
+        font-size: 25px;
+        font-weight: 300;
+        color:#0000009d;
+    }
+    .moim-fee-mobile{
+        display: flex;
+        font-size:25px;
+        font-weight: 500;
+        color:#000;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
-   
-}
+    .moim-fee-2-mobile{
+       display: flex;
+       margin-left: 480px;
+    
+
+    }
+    .moim-enroll-divider-mobile{
+        display: block;
+        border: none;
+        border-bottom: 2px solid rgba(150, 149, 149, 0.267);
+        width: 100%;
+        max-width: 800px;
+        align-content: center;
+        margin: 0 10px;
+    }
+
+
+    .reviews-container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .review-item {
+        width: 100%;
+        max-width: 95%;
+        height: auto;
+        margin-bottom: 15px;
+        flex-direction: row;
+        padding: 12px;
+    }
+
+    .moim-enroll-divider {
+        width: 90%;
+    }
+
+    .host-container {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .host-moimImg {
+        max-width: 100%;
+        padding: 5px;
+        gap: 8px;
+    }
+
+    .host-moimImg img {
+        min-width: 180px;
+        height: 220px;
+    }
+
+    .host-name,
+    .host-introduction {
+        padding-left: 20px;
+    }
+
+    .moim-main-image {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .modal {
+        width: 80%;
+        padding: 16px;
+    }
+
+    .review span {
+        max-height: none;
+        -webkit-line-clamp: unset;
+        display: block;
+    }
+
+    .review p {
+        flex-direction: column;
+    }
+
+      .host-moimImg {
+        max-width: 100%;
+        width: 100%;
+        justify-content: flex-start;
+        overflow-x: auto;
+    }
+
+    .host-moimImg img {
+        min-width: 200px;
+        height: 250px;
+    }
+    
+}   
 
     
 
