@@ -323,7 +323,6 @@ body{
 }
 .review span{
     padding-top: 10px;
-    text-align: justify;
     display: -webkit-box;
     position: relative;
     -webkit-line-clamp: 2;        /* 제한 줄 수  */
@@ -331,7 +330,7 @@ body{
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: 1.4em;           /* 줄 간격 조정 */
-    max-height: 2.8em;            /* 줄 수 × line-height */
+    max-height: 3.5em;            /* 줄 수 × line-height */
     white-space: normal;
     margin-left: -50px;
     margin-top: 15px;
